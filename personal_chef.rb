@@ -39,5 +39,20 @@ class PersonalChef
         	puts "There are #{quantity} #{item} in the fridge."
         end
 	end
+
+	def water_status(minutes)
+	  if minutes < 7
+	    puts "The water is not boiling yet."
+	  elsif minutes == 7
+	    puts "It's just barely boiling"
+	  elsif minutes == 8
+	    puts "It's boiling!"
+	  elsif minutes > 9001
+	  	puts "Water is evaporated"
+	  else
+	    puts "Hot! Hot! Hot!"
+	  end
+	  return self
+	end
 end	
 
