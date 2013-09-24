@@ -1,9 +1,13 @@
 class PersonalChef
-	def make_toast(color = 'Black' , quality = 'perfect')
-
-		puts "Making your #{quality} toast #{color}"
-		return self
-	end
+		def make_toast(color)
+	  		if color.nil?
+	    		puts "How am I supposed to make nothingness toast?"
+	  		else
+	    		puts "Making your toast #{color}!"
+	  		end
+	  		return self
+		end
+	
 
 	def make_eggs(quantity)
 		quantity.times do 
@@ -54,5 +58,13 @@ class PersonalChef
 	  end
 	  return self
 	end
+	def countdown(counter)
+	  while counter > 0
+	    puts "The counter is #{counter}"
+	    counter = counter - 1
+	    sleep 1
+	  end
+	  return self
+	end	
 end	
 
